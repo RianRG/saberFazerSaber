@@ -212,8 +212,8 @@ aside form label span{
   z-index: 100;
 }
 .active{
-  width: 1000px;
-  height: 1000px;
+  width: 2000px;
+  height: 2000px;
   opacity: 1;
 }
 
@@ -221,7 +221,7 @@ aside i{
   color: red;
   font-size: 0rem;
   position: absolute;
-  bottom: 320px;
+  bottom: 420px;
   z-index: 101;
   opacity: 0;
   rotate: -160deg;
@@ -230,7 +230,7 @@ aside i{
 .active + i{
   opacity: 1;
   rotate: 0deg;
-  font-size: 5rem;
+  font-size: 6rem;
 }
 .no-scroll{
   overflow: hidden;
