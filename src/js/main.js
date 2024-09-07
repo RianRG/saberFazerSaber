@@ -1,5 +1,12 @@
 const targets = Array.from(document.querySelectorAll('[data-scroll]'));
-const span = Array.from(document.querySelector('main ul span'));
+const span = Array.from(document.querySelectorAll('main ul span'));
+const button = document.querySelector('aside form button');
+const overAll = document.querySelector('.overall');
+button.addEventListener('click', (e) =>{
+  e.preventDefault();
+  overAll.classList.add('active');
+  document.body.classList.add('no-scroll');
+})
 
 
 const revealScroll = () =>{

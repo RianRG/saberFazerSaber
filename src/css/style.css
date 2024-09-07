@@ -171,6 +171,7 @@ aside p::after{
 aside form label{
   color: white;
   font-size: 2rem;
+  text-align: center;
 }
 
 aside form{
@@ -188,6 +189,7 @@ aside form button{
   padding: 2px 7px;
   margin: 30px 50px;
   letter-spacing: 4px;
+  font-size: 1rem;
   font-weight: 600;
   text-align: center;
 }
@@ -195,4 +197,42 @@ aside form button{
 aside form label span{
   color: red;
   font-weight: 800;
+  text-decoration: underline;
+}
+
+.overall{
+  position: fixed;
+  bottom: -100px;
+  opacity: 0;
+  transition: .6s;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  z-index: 100;
+}
+.active{
+  width: 1000px;
+  height: 1000px;
+  opacity: 1;
+}
+
+aside i{
+  color: red;
+  font-size: 0rem;
+  position: absolute;
+  bottom: 320px;
+  z-index: 101;
+  opacity: 0;
+  rotate: -160deg;
+  transition: .8s;
+}
+.active + i{
+  opacity: 1;
+  rotate: 0deg;
+  font-size: 5rem;
+}
+.no-scroll{
+  overflow: hidden;
+  touch-action: none;
 }
