@@ -3,12 +3,12 @@ const span = Array.from(document.querySelector('main ul span'));
 
 
 const revealScroll = () =>{
-  const windowTop = window.pageYOffset + window.innerHeight*0.5;
-
+  const windowTop = window.pageYOffset + window.innerHeight * 0.2;
+  
   targets.forEach(target =>{
     const span = target.querySelector('span');
 
-    if(windowTop>target.offsetTop){
+    if(windowTop>target.offsetTop -420){
       target.classList.add('selected');
       span.classList.add('span');
     } else{
@@ -17,7 +17,6 @@ const revealScroll = () =>{
     }
   })
 }
-revealScroll();
 if(targets.length){
   window.addEventListener('scroll', () =>{
     revealScroll();
