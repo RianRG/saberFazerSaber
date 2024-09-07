@@ -54,8 +54,15 @@ main ul span{
  opacity: 1; 
  transform: translate3d(0px, 0, 0);
 }
+.span::after{
+  content: '';
+  display: block;
+  height: 2px;
+  width: 50%;
+  background-color: orangered;
+}
 .selected{
-  margin-right: 120px;
+  margin-right: 200px;
   opacity: 1;
 }
 
