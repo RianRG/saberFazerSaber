@@ -9,7 +9,7 @@
   scroll-behavior: smooth;
 }
 *::selection{
-  background-color: rgb(207, 98, 98);
+  background-color: #4e2727;
   color: white;
 }
 body{
@@ -17,7 +17,8 @@ body{
   width: 100%;
   overflow-x: hidden;
   touch-action: pan-y;
-  background-color: rgb(145, 227, 238);
+  background-color: #91e3ee;
+  transition: .4s;
 }
 main{
   height: 100%;
@@ -72,6 +73,7 @@ main ul span{
 .span{
  opacity: 1; 
  transform: translate3d(5px, 0, 0);
+ text-shadow: none;
 }
 .span::after{
   content: '';
@@ -132,6 +134,7 @@ ul li:nth-child(7) span::after{
 .selected{
   margin-right: 200px;
   opacity: 1;
+  text-shadow: 0 10px rgb(82, 204, 211);
 }
 
 [data-scroll="left"].selected{
@@ -140,29 +143,6 @@ ul li:nth-child(7) span::after{
 [data-scroll="right"]{
   rotate: -2deg;
 }
-
-.circle{
-  position: absolute;
-  left: -100px;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  background-color: rgb(141, 166, 212);
-  z-index: -1;
-}
-
-.circle:nth-child(2){
-  top: 200px;
-  left: 100px;
-  background-color: rgb(123, 184, 194);
-}
-.circle:nth-child(3){
-  top: 1200px;
-  left: 300px;
-  height: 700px;
-  width: 700px;
-  background-color: rgb(131, 187, 197);
-}
 aside p{
   font-size: .7rem;
   color: white;
@@ -170,7 +150,6 @@ aside p{
   top: 70px;
   text-align: center;
 }
-
 aside p::before{
   content: '';
   display: block;
@@ -256,4 +235,31 @@ aside i{
 .no-scroll{
   overflow: hidden;
   touch-action: none;
+}
+
+aside form .question{
+  position: absolute;
+  right: 10px;
+  color: rgb(255, 255, 255);
+  opacity: 0;
+  z-index: -1;
+  font-size: 0rem;
+  transition: .8s;
+  rotate: -100deg;
+}
+
+aside form .question:nth-child(2){
+  right: 180px;
+  bottom: 40px;
+  rotate: -200deg;
+}
+
+aside form .shown{
+  opacity: 4%;
+  font-size: 30rem;
+  rotate: 20deg;
+}
+
+aside form .shown:nth-child(2){
+  font-size: 25rem;
 }
