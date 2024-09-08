@@ -141,6 +141,28 @@ ul li:nth-child(7) span::after{
   rotate: -2deg;
 }
 
+.circle{
+  position: absolute;
+  left: -100px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: rgb(141, 166, 212);
+  z-index: -1;
+}
+
+.circle:nth-child(2){
+  top: 200px;
+  left: 100px;
+  background-color: rgb(123, 184, 194);
+}
+.circle:nth-child(3){
+  top: 1200px;
+  left: 300px;
+  height: 700px;
+  width: 700px;
+  background-color: rgb(131, 187, 197);
+}
 aside p{
   font-size: .7rem;
   color: white;
@@ -216,7 +238,6 @@ aside form label span{
   height: 2000px;
   opacity: 1;
 }
-
 aside i{
   color: red;
   font-size: 0rem;
