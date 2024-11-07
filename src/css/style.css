@@ -297,3 +297,7 @@ aside form .shown:nth-child(2){
 .onCapitalLetter.active{
   max-height: 40vh;
 }
+
+.password{
+  padding-bottom: 300px;
+}
