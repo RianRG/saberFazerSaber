@@ -298,18 +298,19 @@ aside form .shown:nth-child(2){
   align-items: center;
   width: 80%;
   max-height: 0;
-  transition: .5s ease-out;
+  transition: .5s;
   overflow: hidden;
 }
 
 .onCapitalLetter p{
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: #1a3c49;
   padding: 20px;
 }
 
 .onCapitalLetter.active{
-  max-height: 400px;
+  max-height: 11.5vh;
+  padding: 100px;
 }
 
 .password{
