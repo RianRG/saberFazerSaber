@@ -11,7 +11,7 @@ form.addEventListener('submit', (e) =>{
   e.preventDefault();
   if(input.value === 'Lins') onCapitalLetter.classList.add('active')
   else if(input.value==='lins')
-    window.location.href='https://youtube.com/shorts/gKEwQId4KVQ'
+    window.location.href='https://youtube.com/shorts/gKEwQId4KVQ?si=eQqgjA9udUUmcAcq'
 })
 
 button.addEventListener('click', (e) =>{
