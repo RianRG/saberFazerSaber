@@ -320,6 +320,7 @@ aside form .shown:nth-child(2){
 
 section{
   height: 100vh;
+  width: 100%;
   background-color: rgb(242, 237, 197);
   box-shadow: 0 -10px rgb(151, 151, 223), 0 -20px rgb(224, 155, 224);
   display: flex;
@@ -372,7 +373,7 @@ section img{
 }
 
 .animate-card{
-  margin-right: 40px;
+  margin-right: 50px;
   padding-right: 110px;
 }
 
@@ -395,6 +396,7 @@ section img{
   color: white;
   padding: 3px 7px;
   background-color: transparent;
+  font-size: .7rem;
 }
 
 .card form button{
@@ -411,6 +413,7 @@ section img{
   color: white;
   font-weight: 800;
   letter-spacing: 3px;
+  font-size: .7rem;
 }
 
 .pdfPassword input:focus + label,
