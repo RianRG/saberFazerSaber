@@ -5,11 +5,11 @@ const overAll = document.querySelector('.overall');
 const questions = Array.from(document.querySelectorAll('.question'));
 const form = document.querySelector('.password');
 const input = document.querySelector('input');
-const onCapitalLetter = document.querySelector('.onCapitalLetter');
+const onCapitalLetter = Array.from(document.querySelectorAll('.onCapitalLetter'));
 
 form.addEventListener('submit', (e) =>{
   e.preventDefault();
-  if(input.value === 'Lins') onCapitalLetter.classList.add('active')
+  if(input.value === 'Lins') onCapitalLetter[0].classList.add('active')
   else if(input.value==='lins')
     window.location.href='https://youtube.com/shorts/gKEwQId4KVQ?si=eQqgjA9udUUmcAcq'
 })
@@ -50,3 +50,26 @@ if(targets.length){
     revealScroll();
   })
 }
+
+
+const card = document.querySelector('.card');
+const png = card.querySelector('.png');
+const pngBackground = card.querySelector('.pngBackground')
+const pdfForm = card.querySelector('.pdfPassword');
+const pdfPassword = pdfForm.querySelector('input');
+png.addEventListener('click', () =>{
+  png.classList.toggle('animate-png');
+  pngBackground.classList.toggle('animate-bg');
+  card.classList.toggle('animate-card')
+})
+
+
+
+pdfForm.addEventListener('submit', (e) =>{
+  e.preventDefault();
+
+  if(pdfPassword.value==="gatta")
+    window.location.href='https://docs.google.com/document/d/1sr2I3DX2obDa0Cy7o4kRJZOR7FPqFoUVPYyQQFcYTuw/edit?tab=t.0'
+  else if(pdfPassword.value==="Gatta")
+    onCapitalLetter[1].classList.add('active')
+})

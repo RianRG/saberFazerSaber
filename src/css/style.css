@@ -315,4 +315,128 @@ aside form .shown:nth-child(2){
 
 .password{
   padding-bottom: 300px;
+  z-index: 10000;
+}
+
+section{
+  height: 100vh;
+  background-color: rgb(242, 237, 197);
+  box-shadow: 0 -10px rgb(151, 151, 223), 0 -20px rgb(224, 155, 224);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+section h1{
+  position: absolute;
+  letter-spacing: 4px;
+  top: 100px;
+  color: rgb(128, 193, 236);
+  text-shadow: 3px 0 rgb(251, 218, 255);
+}
+section img{
+  max-width: 250px;
+  position: absolute;
+}
+
+.card{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+}
+.png{
+  z-index: 10000;
+  transition: .4s;
+}
+.pngBackground{
+  filter: brightness(100%);
+  transition: .4s;
+}
+
+.animate-bg{
+  filter: brightness(30%);
+  transform: rotateX(-10deg) rotateY(20deg);
+  margin-right: 20px;
+  max-width: 200px;
+
+}
+
+.animate-png{
+  transform: translate3d(10, 20, 20);
+  max-width: 230px;
+  transform: rotateX(-10deg) rotateY(20deg);
+  filter: drop-shadow(-10px 0px rgb(77, 241, 217));
+}
+
+.animate-card{
+  margin-right: 40px;
+  padding-right: 110px;
+}
+
+.card form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  left: 100px;
+  transition: .4s;
+  opacity: 0;
+}
+
+.card form input{
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  padding: 3px 7px;
+  background-color: transparent;
+}
+
+.card form button{
+  letter-spacing: 4px;
+  padding: 4px;
+  text-align: center;
+}
+
+.card label{
+  position: relative;
+  bottom: 50px;
+  transition: .4s;
+  pointer-events: none;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.pdfPassword input:focus + label,
+.pdfPassword input:not(:placeholder-shown) + label{
+  bottom: 80px;
+}
+
+.pdfPassword input::placeholder{
+  opacity: 0;
+}
+
+.animate-card form{
+  opacity: 1;
+}
+
+.pdfPassword p{
+  color: white;
+  font-weight: 600;
+}
+
+.pdfPassword .onCapitalLetter p {
+  font-size: .8rem;
+  text-align: center;
+}
+
+.pdfPassword .onCapitalLetter{
+  width: 400px;
+  margin-right: 230px;
 }
