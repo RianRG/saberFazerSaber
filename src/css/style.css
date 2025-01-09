@@ -396,7 +396,7 @@ section img{
   color: white;
   padding: 3px 7px;
   background-color: transparent;
-  font-size: .7rem;
+  font-size: .6rem;
 }
 
 .card form button{
@@ -407,18 +407,18 @@ section img{
 
 .card label{
   position: relative;
-  bottom: 50px;
+  bottom: 40px;
   transition: .4s;
   pointer-events: none;
   color: white;
   font-weight: 800;
   letter-spacing: 3px;
-  font-size: .7rem;
+  font-size: .6rem;
 }
 
 .pdfPassword input:focus + label,
 .pdfPassword input:not(:placeholder-shown) + label{
-  bottom: 80px;
+  bottom: 57px;
 }
 
 .pdfPassword input::placeholder{
