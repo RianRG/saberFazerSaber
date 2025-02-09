@@ -400,6 +400,7 @@ section img{
   padding: 3px 7px;
   background-color: transparent;
   font-size: .8rem;
+  width: 150px;
 }
 
 .card form button{
@@ -416,7 +417,7 @@ section img{
   color: white;
   font-weight: 800;
   letter-spacing: 3px;
-  font-size: 1rem;
+  font-size: .9rem;
 }
 
 .pdfPassword input:focus + label,
