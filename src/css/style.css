@@ -300,6 +300,7 @@ aside form .shown:nth-child(2){
   max-height: 0;
   transition: .5s;
   overflow: hidden;
+  opacity: 0;
 }
 
 .onCapitalLetter p{
@@ -311,6 +312,7 @@ aside form .shown:nth-child(2){
 .onCapitalLetter.active{
   max-height: 11.5vh;
   padding: 100px;
+  opacity: 1;
 }
 
 .password{
@@ -396,7 +398,7 @@ section img{
   color: white;
   padding: 3px 7px;
   background-color: transparent;
-  font-size: .6rem;
+  font-size: .8rem;
 }
 
 .card form button{
@@ -407,18 +409,18 @@ section img{
 
 .card label{
   position: relative;
-  bottom: 40px;
+  bottom: 45px;
   transition: .4s;
   pointer-events: none;
   color: white;
   font-weight: 800;
   letter-spacing: 3px;
-  font-size: .6rem;
+  font-size: 1rem;
 }
 
 .pdfPassword input:focus + label,
 .pdfPassword input:not(:placeholder-shown) + label{
-  bottom: 57px;
+  bottom: 65px;
 }
 
 .pdfPassword input::placeholder{
@@ -441,5 +443,5 @@ section img{
 
 .pdfPassword .onCapitalLetter{
   width: 400px;
-  margin-right: 230px;
+  margin-right: 200px;
 }

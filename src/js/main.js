@@ -72,4 +72,6 @@ pdfForm.addEventListener('submit', (e) =>{
     window.location.href='https://docs.google.com/document/d/1sr2I3DX2obDa0Cy7o4kRJZOR7FPqFoUVPYyQQFcYTuw/edit?tab=t.0'
   else if(pdfPassword.value==="Gatta")
     onCapitalLetter[1].classList.add('active')
+  else
+    onCapitalLetter[1].classList.remove('active');
 })
