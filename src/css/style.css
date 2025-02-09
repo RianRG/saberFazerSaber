@@ -22,7 +22,7 @@ body{
 }
 main{
   height: 100%;
-  overflow-x: hidden;
+  max-width: 100%;
 }
 
 aside{
@@ -446,4 +446,8 @@ section img{
 .pdfPassword .onCapitalLetter{
   width: 400px;
   margin-right: 200px;
+}
+
+.quiz p{
+  font-size: 1.4rem;
 }

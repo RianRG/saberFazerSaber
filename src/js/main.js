@@ -9,9 +9,11 @@ const onCapitalLetter = Array.from(document.querySelectorAll('.onCapitalLetter')
 
 form.addEventListener('submit', (e) =>{
   e.preventDefault();
-  if(input.value === 'Lins') onCapitalLetter[0].classList.add('active')
+  if(input.value === 'Lins' || input.value==='Ribossomos') onCapitalLetter[0].classList.add('active')
   else if(input.value==='lins')
     window.location.href='https://youtube.com/shorts/gKEwQId4KVQ?si=eQqgjA9udUUmcAcq'
+  else if(input.value==='ribossomos')
+    window.location.href='https://youtube.com/shorts/UrAV24D58-U'
 })
 
 button.addEventListener('click', (e) =>{
