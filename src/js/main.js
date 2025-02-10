@@ -12,7 +12,7 @@ form.addEventListener('submit', (e) =>{
   if(input.value === 'Lins' || input.value==='Ribossomos') onCapitalLetter[0].classList.add('active')
   else if(input.value==='lins')
     window.location.href='https://youtube.com/shorts/gKEwQId4KVQ?si=eQqgjA9udUUmcAcq'
-  else if(input.value==='ribossomos')
+  else if(input.value==='ribossomo')
     window.location.href='https://youtube.com/shorts/UrAV24D58-U'
 })
 
