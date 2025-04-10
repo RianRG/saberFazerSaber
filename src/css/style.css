@@ -326,7 +326,7 @@ section{
   height: 100vh;
   width: 100%;
   background-color: rgb(242, 237, 197);
-  box-shadow: 0 -10px rgb(151, 151, 223), 0 -20px rgb(224, 155, 224);
+  box-shadow: 0 -10px rgb(151, 151, 223), 0 -20px rgb(224, 155, 224), 0 10px rgb(151, 151, 223), 0 20px rgb(224, 155, 224);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,23 +362,17 @@ section img{
 }
 
 .animate-bg{
-  filter: brightness(30%);
-  transform: rotateX(-10deg) rotateY(20deg);
+  filter: brightness(50%) blur(2px);
+  transform: rotateX(-10deg) rotateY(200deg);
   margin-right: 20px;
   max-width: 200px;
-
 }
 
 .animate-png{
   transform: translate3d(10, 20, 20);
   max-width: 230px;
-  transform: rotateX(-10deg) rotateY(20deg);
-  filter: drop-shadow(-10px 0px rgb(77, 241, 217));
-}
-
-.animate-card{
-  margin-right: 50px;
-  padding-right: 110px;
+  transform: rotateX(-10deg) rotateY(200deg);
+  filter: blur(2px) drop-shadow(20px 0 rgb(121, 181, 199)) drop-shadow(-20px 0 rgb(121, 181, 199));
 }
 
 .card form{
@@ -388,9 +382,10 @@ section img{
   flex-direction: column;
   gap: 20px;
   position: absolute;
-  left: 100px;
   transition: .4s;
   opacity: 0;
+  pointer-events: none;
+  z-index: 10000;
 }
 
 .card form input{
@@ -400,7 +395,7 @@ section img{
   color: white;
   padding: 3px 7px;
   background-color: transparent;
-  font-size: .8rem;
+  font-size: 2rem;
   width: 150px;
 }
 
@@ -412,18 +407,18 @@ section img{
 
 .card label{
   position: relative;
-  bottom: 45px;
+  bottom: 65px;
   transition: .4s;
   pointer-events: none;
   color: white;
   font-weight: 800;
   letter-spacing: 3px;
-  font-size: .9rem;
+  font-size: 2rem;
 }
 
 .pdfPassword input:focus + label,
 .pdfPassword input:not(:placeholder-shown) + label{
-  bottom: 65px;
+  bottom: 120px;
 }
 
 .pdfPassword input::placeholder{
@@ -432,6 +427,7 @@ section img{
 
 .animate-card form{
   opacity: 1;
+  pointer-events: all;
 }
 
 .pdfPassword p{
@@ -446,9 +442,32 @@ section img{
 
 .pdfPassword .onCapitalLetter{
   width: 400px;
-  margin-right: 200px;
 }
 
 .quiz p{
   font-size: 1.4rem;
+}
+
+.month7{
+  box-shadow: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+  min-height: 200vh;
+  padding: 20px;
+}
+
+.month7 img{
+  position: relative;
+  max-width: 370px;
+  box-shadow: 10px 10px rgb(102, 102, 146);
+}
+
+.month7 p{
+  color: white;
+  text-align: center;
+  font-size: .8rem;
 }

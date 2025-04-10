@@ -25,7 +25,9 @@ button.addEventListener('click', (e) =>{
 
 const revealScroll = () =>{
   const windowTop = window.pageYOffset + window.innerHeight * 0.2;
-  if(windowTop >= 1500 && windowTop<=2000){
+  if(windowTop>=4000 && windowTop<=5901){
+    document.body.style.backgroundColor='rgb(211, 152, 245)'
+  }else if(windowTop >= 1500 && windowTop<=2300){
     document.body.style.backgroundColor='#4e2727'
     questions.forEach(question => question.classList.add('shown'))
   } else if(windowTop>=2000){
