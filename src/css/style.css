@@ -230,6 +230,9 @@ aside form label span{
   transition: .8s;
 }
 .overall.active i{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 1;
   rotate: 0deg;
   font-size: 6rem;
