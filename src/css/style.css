@@ -203,7 +203,9 @@ aside form label span{
 
 .overall{
   position: fixed;
-  bottom: -100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   transition: .6s;
   width: 0;
@@ -211,23 +213,23 @@ aside form label span{
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .active{
   width: 2000px;
   height: 2000px;
   opacity: 1;
 }
-aside i{
+.overall i{
   color: red;
   font-size: 0rem;
-  position: absolute;
-  bottom: 420px;
-  z-index: 101;
   opacity: 0;
   rotate: -160deg;
   transition: .8s;
 }
-.active + i{
+.overall.active i{
   opacity: 1;
   rotate: 0deg;
   font-size: 6rem;
