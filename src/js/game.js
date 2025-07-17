@@ -43,7 +43,7 @@ form.addEventListener('submit', (e) =>{
     playSwordAudio();
     setTimeout(() =>{
       playSwordAudio();
-    }, 1950)
+    }, 2050)
   }, 200)
 
   setTimeout(() =>{
