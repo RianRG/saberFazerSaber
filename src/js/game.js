@@ -4,11 +4,12 @@ const form = question.querySelector('form')
 const lett = document.querySelector('main img.let');
 popup.classList.remove('shown');
 
-const swordAudio = new Audio('../src/imgs/swordAudio.mp3');
-const secondSwordAudio = new Audio('../src/imgs/secondSwordAudio.mp3');
+const swordAudio = new Audio('./src/imgs/swordAudio.mp3');
+const secondSwordAudio = new Audio('./src/imgs/secondSwordAudio.mp3');
 swordAudio.volume = 0.4
 secondSwordAudio.volume = 0.4
 
+console.log(lett.src)
 const playSwordAudio = () =>{
   setTimeout(() =>{
     swordAudio.play();
@@ -30,9 +31,8 @@ const playSwordAudio = () =>{
 
 // document.addEventListener('click', () =>{
 // })
-
-const attackingGif = '../src/imgs/let-attacking.gif';
-const idleGif = '../src/imgs/let-idle.gif'
+const attackingGif = './src/imgs/let-attacking.gif';
+const idleGif = './src/imgs/let-idle.gif'
 
 new Image().src = idleGif;
 new Image().src = attackingGif
