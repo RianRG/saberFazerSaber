@@ -9,7 +9,6 @@ const secondSwordAudio = new Audio('./src/imgs/secondSwordAudio.mp3');
 swordAudio.volume = 0.4
 secondSwordAudio.volume = 0.4
 
-console.log(lett.src)
 const playSwordAudio = () =>{
   setTimeout(() =>{
     swordAudio.play();
@@ -24,7 +23,7 @@ const playSwordAudio = () =>{
         secondSwordAudio.pause();
         secondSwordAudio.currentTime=0;
       }, 1500)
-    }, 600)
+    }, 500)
   }, 200)
 }
 
@@ -51,5 +50,3 @@ form.addEventListener('submit', (e) =>{
     lett.src= idleGif + '?t=' + new Date().getTime();
   }, 3900)
 })
-
-
