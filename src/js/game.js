@@ -48,5 +48,5 @@ form.addEventListener('submit', (e) =>{
 
   setTimeout(() =>{
     lett.src= idleGif + '?t=' + new Date().getTime();
-  }, 3900)
+  }, 4000)
 })
