@@ -25,7 +25,7 @@ const playSwordAudio = () =>{
         secondSwordAudio.currentTime=0;
       }, 1500)
     }, 600)
-  }, 300)
+  }, 200)
 }
 
 
