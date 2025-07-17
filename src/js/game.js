@@ -2,12 +2,15 @@ const popup = document.querySelector('main aside.shown.first');
 const question = document.querySelector('main aside.shown.question')
 const form = question.querySelector('form')
 const lett = document.querySelector('main img.let');
+const h1 = document.querySelector('main h1');
 popup.classList.remove('shown');
 
 const swordAudio = new Audio('../../imgs/swordAudio.mp3');
 const secondSwordAudio = new Audio('../../imgs/secondSwordAudio.mp3');
 swordAudio.volume = 0.4
 secondSwordAudio.volume = 0.4
+
+h1.textContent = lett.src;
 
 const playSwordAudio = () =>{
   setTimeout(() =>{
