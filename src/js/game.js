@@ -10,7 +10,7 @@ const secondSwordAudio = new Audio('../../imgs/secondSwordAudio.mp3');
 swordAudio.volume = 0.4
 secondSwordAudio.volume = 0.4
 
-h1.textContent = lett.src;
+h1.innerHTML = lett.src;
 
 const playSwordAudio = () =>{
   setTimeout(() =>{
