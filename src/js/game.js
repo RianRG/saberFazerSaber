@@ -4,7 +4,7 @@ const form = question.querySelector('form')
 const lett = document.querySelector('main img.let');
 popup.classList.remove('shown');
 
-const swordAudio = new Audio('./../src/imgs/swordAudio.mp3');
+const swordAudio = new Audio('../../src/imgs/swordAudio.mp3');
 const secondSwordAudio = new Audio('../../src/imgs/secondSwordAudio.mp3');
 swordAudio.volume = 0.4
 secondSwordAudio.volume = 0.4
