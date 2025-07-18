@@ -6,9 +6,10 @@ popup.classList.remove('shown');
 
 const swordAudio = new Audio('./src/imgs/swordAudio.mp3');
 const secondSwordAudio = new Audio('./src/imgs/secondSwordAudio.mp3');
-swordAudio.volume = 0.4
-secondSwordAudio.volume = 0.4
-
+const soundtrack = document.querySelector('audio')
+swordAudio.volume = 0.2
+secondSwordAudio.volume = 0.2
+soundtrack.volume = 0.06;
 const playSwordAudio = () =>{
   setTimeout(() =>{
     swordAudio.play();
