@@ -123,6 +123,7 @@ let currentDialogue = localStorage.getItem('currentDialogue') || 0;
 
 if(!dialogues[currentDialogue]){
   document.querySelector('main .dialogueDiv').style.display='none';
+  question.classList.add('question')
 }
 else{
 document.querySelector('body').classList.add('onDialogue')
