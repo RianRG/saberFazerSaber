@@ -68,6 +68,12 @@ const questions = {
     question: 'Quando os dois pombinhos completaram um mês, o que ele deu para ela?',
     answer: 'nada'
   },
+
+  1: {
+    number: '2/12',
+    question: 'Ele ficou um tempinho moldando uma obra de arte sobre uma pessoa, até então pouco se sabe sobre ela. Esta obra durou quantos segundos?',
+    answer: '25'
+  }
  
 }
 
@@ -120,12 +126,6 @@ const startAttackingAnimation = () =>{
     if(questions[currentQuestion]) question.classList.add('question')
   }, 4000)
 }
-
-form.addEventListener('submit', (e) =>{
-  e.preventDefault();
-  startAttackingAnimation();
-})
-
 //=========================================== dialogues
 
 const writingAnimation = async (textHtml) =>{
@@ -137,7 +137,7 @@ const writingAnimation = async (textHtml) =>{
       setTimeout(() =>{
         textHtml.textContent += text[k]
         if(k==text.length-1) res();
-      }, 20*k)
+      }, 1*k)
     }
    
   })
@@ -149,7 +149,7 @@ const writingAnimation = async (textHtml) =>{
 
 if(!dialogues[currentDialogue]){
   document.querySelector('main .dialogueDiv').style.display='none';
-  question.classList.add('question')
+  if(questions[currentQuestion]) question.classList.add('question')
 }
 else{
 username.textContent = dialogues[currentDialogue].h4;
@@ -195,18 +195,29 @@ if(!questions[currentQuestion]){
 
 form.addEventListener('submit', (e) =>{
   e.preventDefault();
-  startAttackingAnimation();
-
-  if(!questions[currentQuestion+1]){
-    localStorage.setItem('currentQuestion', currentQuestion+1);
-    document.querySelector('main .shownForm').style.display='none';
-
-    return;
+  
+  
+  if(input.value.toString() === questions[currentQuestion].answer){
+    startAttackingAnimation();
+    if(!questions[currentQuestion+1]){
+      localStorage.setItem('currentQuestion', currentQuestion+1);
+      question.classList.remove('question')
+      setTimeout(() =>{
+        question.style.display='none'
+      }, 450)
+      return;
+    }
+    currentQuestion++;
+    localStorage.setItem('currentQuestion', currentQuestion);
+    setTimeout(() =>{
+      questionNumber.textContent = questions[currentQuestion].number
+      questionTitle.textContent = questions[currentQuestion].question
+      input.value=''
+    }, 450)
+  } else{
+    document.querySelector('main .shownForm').classList.add('shake');
+    setTimeout(() =>{
+    document.querySelector('main .shownForm').classList.remove('shake');
+    }, 300)
   }
-
-  currentQuestion++;
-  localStorage.setItem('currentQuestion', currentQuestion);
-
-  questionNumber.textContent = questions[currentQuestion].number
-  questionTitle.textContent = questions[currentQuestion].question
 })
