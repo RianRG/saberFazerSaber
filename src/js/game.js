@@ -1,6 +1,7 @@
 const popup = document.querySelector('main aside.shownReceived');
 const question = document.querySelector('main aside.shownForm')
 const form = question.querySelector('form')
+const input = form.querySelector('input');
 const lett = document.querySelector('main img.let');
 const textDialogue = document.querySelector('main .dialogueDiv .dialogue .textDialogue')
 const character = document.querySelector('main .dialogueDiv .dialogue img')
@@ -44,8 +45,8 @@ const idleGif = './src/imgs/let-idle.gif'
 new Image().src = idleGif;
 new Image().src = attackingGif
 
-form.addEventListener('submit', (e) =>{
-  e.preventDefault();
+
+const startAttackingAnimation = () =>{
   setTimeout(() =>{
     lett.src=attackingGif + '?t=' + new Date().getTime();
     playSwordAudio();
@@ -57,6 +58,11 @@ form.addEventListener('submit', (e) =>{
   setTimeout(() =>{
     lett.src= idleGif + '?t=' + new Date().getTime();
   }, 4000)
+}
+
+form.addEventListener('submit', (e) =>{
+  e.preventDefault();
+  startAttackingAnimation();
 })
 
 //=========================================== dialogues
@@ -152,3 +158,12 @@ skipButton.addEventListener('click', () =>{
 
 
 // ============== questions
+
+const questions = {
+  
+}
+
+form.addEventListener('submit', (e) =>{
+  e.preventDefault();
+  startAttackingAnimation();
+})
