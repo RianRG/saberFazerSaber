@@ -142,23 +142,19 @@ writingAnimation(paragraph)
 
 character.src = dialogues[currentDialogue].src
 skipButton.addEventListener('click', () =>{
-  console.log(currentDialogue)
-  console.log(dialogues[currentDialogue+1])
-  console.log(dialogues[2])
-  if(dialogues[currentDialogue+1]) {currentDialogue++;}
-  else{
+  if(!dialogues[currentDialogue+1]) {
     localStorage.setItem('currentDialogue', currentDialogue+1);
     document.querySelector('main .dialogueDiv').style.display='none';
 
     popup.classList.add('first')
     return;
   };
+  currentDialogue++;
   localStorage.setItem('currentDialogue', currentDialogue);
   username.textContent = dialogues[currentDialogue].h4;
   paragraph.textContent = dialogues[currentDialogue].p
   writingAnimation(paragraph)
   character.src = dialogues[currentDialogue].src
-
 })
 }
 
@@ -184,12 +180,25 @@ if(!dialogues[currentDialogue]){
   questionTitle.textContent = questions[0].question
   questionNumber.textContent = questions[0].number
 }
-let currentQuestion = localStorage.getItem('currentQuestion') || 0;
+let currentQuestion = +localStorage.getItem('currentQuestion') || 0;
 
+if(!questions[currentQuestion]){
+  document.querySelector('main .shownForm').style.display='none';
+  question.classList.remove('question')
+}
 
 form.addEventListener('submit', (e) =>{
   e.preventDefault();
   startAttackingAnimation();
-  
+
+  if(!questions[currentQuestion+1]){
+    localStorage.setItem('currentQuestion', currentQuestion+1);
+    document.querySelector('main .shownForm').style.display='none';
+
+    return;
+  }
+
+  currentQuestion++;
+  localStorage.setItem('currentQuestion', currentQuestion);
 
 })
