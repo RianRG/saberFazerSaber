@@ -77,7 +77,6 @@ const writingAnimation = async (textHtml) =>{
 
   promise.then(() =>{
     skipButton.style.pointerEvents='all';
-    console.log('ok')
   })
 }
 

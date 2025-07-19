@@ -43,7 +43,7 @@ main aside.shownReceived{
   padding: 20px;
   width: 300px;
   left: 0;
-  top: 10px;
+  top: 90px;
   right: 0;
   margin-left: auto;
   margin-right: auto;
@@ -53,7 +53,6 @@ main aside.shownReceived{
   justify-content: center;
   gap: 10px;
   border-radius: 10px;
-  pointer-events: none;
   opacity: 0;
   transition: .4s;
   pointer-events: none;
@@ -74,16 +73,6 @@ main aside.shownReceived p{
   color: white;
 }
 
-main aside.shownForm.question{
-  opacity: 1;
-  pointer-events: all;
-  
-}
-
-main aside .shownForm{
-  opacity: 0;
-  pointer-events: none;
-}
 
 main aside.shownForm input{
   background-color: transparent;
@@ -93,6 +82,26 @@ main aside.shownForm input{
   color: white;
   padding: 4px 10px;
 }
+
+main aside.shownForm {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  z-index: 10001; 
+  opacity: 0;
+  pointer-events: none;
+}
+
+main aside.shownForm.question{
+  opacity: 1;
+  pointer-events: all;
+}
+
+
 
 main aside img{
   max-width: 200px;
