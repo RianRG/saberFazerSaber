@@ -26,13 +26,13 @@ main{
   width: 100%;
   height: 100vh;
   background-image: url('../imgs/background21.gif');
-  background-size: 560px;
-  background-position: right bottom;
+  background-size: 600px;
+  background-position: bottom;
 }
 
 main .let{
   position: absolute;
-  top: 37%;
+  top: 34%;
   left: -60px;
 }
 
@@ -80,24 +80,25 @@ main aside.shownForm input{
   outline: none;
   border-bottom: 2px solid white;
   color: white;
-  width: 100%;
+  width: 80%;
   text-align: center;
   padding: 4px 10px;
   margin-top: 20px;
 }
 
 main aside.shownForm form{
-  max-width: 90%;
+  max-width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 90px;
 }
 
 main aside.shownForm {
   position: absolute;
-  top: 300px;
+  top: 70px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -109,13 +110,14 @@ main aside.shownForm {
   pointer-events: none;
   transition: .4s;
   background-image: url('../imgs/notebook-export.png');
-  background-size: 500px;
-  background-position: -60px;
+  background-size: 400px;
+  background-repeat: no-repeat;
   text-align: center;
   padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(.8);
 }
 
 main aside.shownForm.question{
@@ -126,6 +128,7 @@ main aside.shownForm.question{
 main aside.shownForm *{
   margin-top: 20px;
   color: white;
+  font-size: .8rem;
 }
 
 main aside img{
