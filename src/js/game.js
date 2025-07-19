@@ -1,7 +1,9 @@
 const popup = document.querySelector('main aside.shownReceived');
 const question = document.querySelector('main aside.shownForm')
 const form = question.querySelector('form')
+const questionNumber = form.querySelector('span');
 const input = form.querySelector('input');
+const questionTitle = form.querySelector('p')
 const lett = document.querySelector('main img.let');
 const textDialogue = document.querySelector('main .dialogueDiv .dialogue .textDialogue')
 const character = document.querySelector('main .dialogueDiv .dialogue img')
@@ -48,15 +50,17 @@ new Image().src = attackingGif
 
 const startAttackingAnimation = () =>{
   setTimeout(() =>{
+    question.classList.remove('question')
     lett.src=attackingGif + '?t=' + new Date().getTime();
     playSwordAudio();
     setTimeout(() =>{
       playSwordAudio();
     }, 2050)
-  }, 200)
+  }, 300)
 
   setTimeout(() =>{
     lett.src= idleGif + '?t=' + new Date().getTime();
+    question.classList.add('question')
   }, 4000)
 }
 
@@ -159,11 +163,29 @@ skipButton.addEventListener('click', () =>{
 
 // ============== questions
 
+popup.addEventListener('click', () =>{
+  popup.classList.remove('first');
+  question.classList.add('question')
+  questionTitle.textContent = questions[0].question
+})
 const questions = {
-  
+  0: {
+    number: '1/12',
+    question: 'Quando os dois pombinhos completaram um mês, o que ele deu para ela?',
+    answer: 'nada'
+  }
 }
+
+if(!dialogues[currentDialogue]){
+  questionTitle.textContent = questions[0].question
+  questionNumber.textContent = questions[0].number
+}
+let currentQuestion = localStorage.getItem('currentQuestion') || 0;
+
 
 form.addEventListener('submit', (e) =>{
   e.preventDefault();
   startAttackingAnimation();
+  
+
 })

@@ -83,20 +83,39 @@ main aside.shownForm input{
   width: 100%;
   text-align: center;
   padding: 4px 10px;
+  margin-top: 20px;
+}
+
+main aside.shownForm form{
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 main aside.shownForm {
   position: absolute;
-  top: 500px;
+  top: 300px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 300px;
+  width: 400px;
+  height: 520px;
   z-index: 10001; 
   opacity: 0;
   pointer-events: none;
   transition: .4s;
+  background-image: url('../imgs/notebook-export.png');
+  background-size: 500px;
+  background-position: -60px;
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main aside.shownForm.question{
@@ -104,7 +123,10 @@ main aside.shownForm.question{
   pointer-events: all;
 }
 
-
+main aside.shownForm *{
+  margin-top: 20px;
+  color: white;
+}
 
 main aside img{
   max-width: 200px;
