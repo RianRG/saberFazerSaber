@@ -129,21 +129,23 @@ const dialogues = {
   },
   
 }
-let currentDialogue = localStorage.getItem('currentDialogue') || 0;  
+let currentDialogue = +localStorage.getItem('currentDialogue') || 0;  
 
 if(!dialogues[currentDialogue]){
   document.querySelector('main .dialogueDiv').style.display='none';
   question.classList.add('question')
 }
 else{
-document.querySelector('body').classList.add('onDialogue')
 username.textContent = dialogues[currentDialogue].h4;
 paragraph.textContent = dialogues[currentDialogue].p
 writingAnimation(paragraph)
 
 character.src = dialogues[currentDialogue].src
 skipButton.addEventListener('click', () =>{
-  if(dialogues[currentDialogue+1]) currentDialogue++;
+  console.log(currentDialogue)
+  console.log(dialogues[currentDialogue+1])
+  console.log(dialogues[2])
+  if(dialogues[currentDialogue+1]) {currentDialogue++;}
   else{
     localStorage.setItem('currentDialogue', currentDialogue+1);
     document.querySelector('main .dialogueDiv').style.display='none';
@@ -167,6 +169,8 @@ popup.addEventListener('click', () =>{
   popup.classList.remove('first');
   question.classList.add('question')
   questionTitle.textContent = questions[0].question
+  questionTitle.textContent = questions[0].question
+  questionNumber.textContent = questions[0].number
 })
 const questions = {
   0: {
