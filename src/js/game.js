@@ -68,13 +68,16 @@ const questions = {
     question: 'Quando os dois pombinhos completaram um mês, o que ele deu para ela?',
     answer: 'nada'
   },
-
   1: {
     number: '2/12',
     question: 'Ele ficou um tempinho moldando uma obra de arte sobre uma pessoa, até então pouco se sabe sobre ela. Esta obra durou quantos segundos?',
     answer: '25'
+  },
+  2: {
+    number: '3/12',
+    question: 'Esse pombinho na verdade tinha outra profissão, ele regava flores. Mas entre tantas flores, uma acabou chamando ele por um nome: "O __________"',
+    answer: 'jardineiro'
   }
- 
 }
 
 let currentQuestion = +localStorage.getItem('currentQuestion') || 0;
