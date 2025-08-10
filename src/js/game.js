@@ -127,7 +127,7 @@ const startAttackingAnimation = () =>{
   setTimeout(() =>{
     lett.src= idleGif + '?t=' + new Date().getTime();
     if(questions[currentQuestion]) question.classList.add('question')
-  }, 4000)
+  }, 4200)
 }
 //=========================================== dialogues
 
