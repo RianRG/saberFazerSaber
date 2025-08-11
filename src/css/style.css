@@ -17,7 +17,7 @@ body{
   width: 100%;
   overflow-x: hidden;
   touch-action: pan-y;
-  background-color: #91e3ee;
+  background-color: #421717;
   transition: .4s;
 }
 main{
@@ -37,7 +37,7 @@ aside h4{
   color: white;
   font-size: 3rem;
   text-shadow: 2px 15px rgb(218, 187, 224);
-}
+}*
 
 main ul{
   display: flex;
@@ -310,7 +310,7 @@ aside form .shown:nth-child(2){
 
 .onCapitalLetter p{
   font-size: 1rem;
-  background-color: #1a3c49;
+  background-color: #90a786;
   padding: 20px;
 }
 
@@ -328,7 +328,7 @@ aside form .shown:nth-child(2){
 section{
   height: 100vh;
   width: 100%;
-  background-color: rgb(242, 237, 197);
+  background-color: rgb(37, 22, 22);
   box-shadow: 0 -10px rgb(151, 151, 223), 0 -20px rgb(224, 155, 224), 0 10px rgb(151, 151, 223), 0 20px rgb(224, 155, 224);
   display: flex;
   justify-content: center;
@@ -524,6 +524,10 @@ section img{
   border: 2px solid white;
   color: white;
   animation: glitch3 2s infinite;
+}
+
+.month11 .timeRemaining{
+  animation: glitch1 2s infinite
 }
 
 /*Keyframes*/

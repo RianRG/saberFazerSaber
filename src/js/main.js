@@ -31,9 +31,9 @@ const revealScroll = () =>{
     document.body.style.backgroundColor='#4e2727'
     questions.forEach(question => question.classList.add('shown'))
   } else if(windowTop>=2000){
-    document.body.style.backgroundColor='#317e9c'
+    document.body.style.backgroundColor='#919c31ff'
   } else{
-    document.body.style.backgroundColor='#91e3ee'
+    document.body.style.backgroundColor='#2b1b1bff'
     questions.forEach(question => question.classList.remove('shown'))
   }
 
@@ -79,3 +79,11 @@ pdfForm.addEventListener('submit', (e) =>{
   else
     onCapitalLetter[1].classList.remove('active');
 })
+
+const time = document.querySelector('.timeRemaining');
+
+const hoje = new Date();
+const futureDate = new Date('2025-09-10');
+const diffMilisseconds = futureDate.getTime() - hoje.getTime();
+const remainingDays = Math.floor(diffMilisseconds / (1000 * 60 * 60 * 24));
+time.textContent = `Faltam ${remainingDays} dias`;
