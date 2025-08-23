@@ -213,12 +213,14 @@ const attackingGif = './src/imgs/let-attacking.gif';
 const idleGif = './src/imgs/let-idle.gif';
 const idleVillainGif = './src/imgs/villain.gif';
 const villainHitGif = './src/imgs/villain-hit.gif'
+const transitionToRian = './src/imgs/transitionToRian.gif';
 rian.src = idleVillainGif;
 
 new Image().src = idleGif;
 new Image().src = attackingGif;
 new Image().src = idleVillainGif;
 new Image().src = villainHitGif
+new Image().src = transitionToRian;
 
 // Função de animação de ataque (corrigida)
 const startAttackingAnimation = () => {
@@ -380,6 +382,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   
   if (input.value.toString().trim().toLowerCase() === questions[currentQuestion].answer.toLowerCase()) {
+    input.disabled = true;
     startAttackingAnimation();
     
     if (!questions[currentQuestion + 1]) {
@@ -391,48 +394,55 @@ form.addEventListener('submit', (e) => {
       }, 450);
       endingTimeouts.push(hideQuestionTimeout);
 
-      whiteScreen.classList.add('shownWhite');
-      whiteScreen.querySelector('p').textContent = 'Viu? Quando você confia em você mesma, tudo dá certo!';
-      
-      const endSequenceTimeout1 = setTimeout(() => {
-        whiteScreen.classList.remove('shownWhite');
-        main.style.backgroundImage = "url('./src/imgs/backgroundAfterfight.gif')";
-        lett.style.display = 'none';
-        
-        const endSequenceTimeout2 = setTimeout(() => {
-          main.style.backgroundImage = "url('./src/imgs/transitionBackground.gif')";
-          
-          const endSequenceTimeout3 = setTimeout(() => {
-            whiteScreen.classList.add('shownWhite');
-            whiteScreen.style.backgroundColor = 'transparent';
-            whiteScreen.querySelector('p').innerHTML = `
-              1 ano de história... <br><br> 
-              Primeiro ano de RL e eu só queria dizer que eu amo você, amo seu jeito e tudo que você transmite <br><br> 
-              Fim da 1.º Temporada <br><br> 
+      setTimeout(() =>{
+        rian.src = transitionToRian + '?t=' + new Date().getTime();
+      }, 4200)
 
-              X linhas de html
-              <br>
-              X linhas de css
-              <br>
-              X linhas de javascript
-              <br>
-              Muitas linhas da nossa história pela frente!
-              <br><br>
-              Créditos: Rian Gomes, Letícia Rangel
-            `;
-            localStorage.setItem('onEnd', 1);
-            whiteScreen.querySelector('p').style.marginBottom = '900px';
-          }, 6500);
-          endingTimeouts.push(endSequenceTimeout3);
-        }, 6300);
-        endingTimeouts.push(endSequenceTimeout2);
-      }, 6000);
-      endingTimeouts.push(endSequenceTimeout1);
-      
-      return;
+      setTimeout(() =>{
+          whiteScreen.classList.add('shownWhite');
+        whiteScreen.querySelector('p').textContent = 'Viu? Quando você confia em você mesma, tudo dá certo!';
+        rian.style.display = 'none'
+        
+        const endSequenceTimeout1 = setTimeout(() => {
+          whiteScreen.classList.remove('shownWhite');
+          main.style.backgroundImage = "url('./src/imgs/backgroundAfterfight.gif')";
+          lett.style.display = 'none';
+          
+          const endSequenceTimeout2 = setTimeout(() => {
+            main.style.backgroundImage = "url('./src/imgs/transitionBackground.gif')";
+            
+            const endSequenceTimeout3 = setTimeout(() => {
+              whiteScreen.classList.add('shownWhite');
+              whiteScreen.style.backgroundColor = 'transparent';
+              whiteScreen.querySelector('p').innerHTML = `
+                1 ano de história... <br><br> 
+                Primeiro ano de RL e eu só queria dizer que eu amo você, amo seu jeito e tudo que você transmite <br><br> 
+                Fim da 1.º Temporada <br><br> 
+
+                X linhas de html
+                <br>
+                X linhas de css
+                <br>
+                X linhas de javascript
+                <br>
+                Muitas linhas da nossa história pela frente!
+                <br><br>
+                Créditos: Rian Gomes, Letícia Rangel
+              `;
+              localStorage.setItem('onEnd', 1);
+              whiteScreen.querySelector('p').style.marginBottom = '900px';
+            }, 6500);
+            endingTimeouts.push(endSequenceTimeout3);
+          }, 6300);
+          endingTimeouts.push(endSequenceTimeout2);
+        }, 6000);
+        endingTimeouts.push(endSequenceTimeout1);
+        
+        return;
+      }, 9000)
     }
     
-    // currentQuestion++;
+    currentQuestion++;
     localStorage.setItem('currentQuestion', currentQuestion);
     
     const updateQuestionTimeout = setTimeout(() => {
@@ -441,7 +451,7 @@ form.addEventListener('submit', (e) => {
       input.value = '';
     }, 450);
     attackingTimeouts.push(updateQuestionTimeout);
-    
+    input.disabled=false;
   } else {
     document.querySelector('main .shownForm').classList.add('shake');
     
