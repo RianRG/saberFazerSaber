@@ -249,7 +249,7 @@ const startAttackingAnimation = () => {
   attackingTimeouts.push(endTimeout);
 }
 
-// Função de animação de escrita (corrigida)
+
 const writingAnimation = async (textHtml) => {
   clearWritingTimeouts();
   skipButton.style.pointerEvents = 'none';
@@ -265,7 +265,7 @@ const writingAnimation = async (textHtml) => {
           skipButton.style.pointerEvents = 'all';
           resolve();
         }
-      }, 1 * k); // Aumentei um pouco o delay para melhor legibilidade
+      },60 * k); 
       writingTimeoutIds.push(timeoutId);
     }
   });
@@ -328,7 +328,7 @@ const handleSkipClick = () => {
       lett.style.display = 'block';
       lett.src = `./src/imgs/let-idle.gif`;
     }
-    currentDialogue += 1; // Corrigido: era += 5
+    currentDialogue += 1; 
     localStorage.setItem('currentDialogue', currentDialogue);
     username.textContent = dialogues[currentDialogue].h4;
     paragraph.textContent = dialogues[currentDialogue].p;
@@ -355,7 +355,7 @@ const handleSkipClick = () => {
       username.style.color = 'darkblue';
       skipButton.style.color = 'darkblue';
     }
-    currentDialogue += 1; // Corrigido: era += 5
+    currentDialogue += 1;
     localStorage.setItem('currentDialogue', currentDialogue);
     username.textContent = dialogues[currentDialogue].h4;
     paragraph.textContent = dialogues[currentDialogue].p;
@@ -401,11 +401,11 @@ form.addEventListener('submit', (e) => {
       setTimeout(() =>{
           whiteScreen.classList.add('shownWhite');
         whiteScreen.querySelector('p').textContent = 'Viu? Quando você confia em você mesma, tudo dá certo!';
-        rian.style.display = 'none'
-        
+        soundtrack.pause();
         const endSequenceTimeout1 = setTimeout(() => {
           whiteScreen.classList.remove('shownWhite');
           main.style.backgroundImage = "url('./src/imgs/backgroundAfterfight.gif')";
+          rian.style.display = 'none'
           lett.style.display = 'none';
           
           const endSequenceTimeout2 = setTimeout(() => {
@@ -419,11 +419,11 @@ form.addEventListener('submit', (e) => {
                 Primeiro ano de RL e eu só queria dizer que eu amo você, amo seu jeito e tudo que você transmite <br><br> 
                 Fim da 1.º Temporada <br><br> 
 
-                X linhas de html
+                162 linhas de html
                 <br>
-                X linhas de css
+                990 linhas de css
                 <br>
-                X linhas de javascript
+                561 linhas de javascript
                 <br>
                 Muitas linhas da nossa história pela frente!
                 <br><br>
