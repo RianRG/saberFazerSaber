@@ -111,28 +111,63 @@ let currentDialogue = +localStorage.getItem('currentDialogue') || 0;
 const questions = {
   0: {
     number: '1/12',
-    question: 'Quando os dois pombinhos completaram um mês, o que ele deu para ela?',
+    question: 'Quando nós completamos um mês, o que foi mesmo que ele me deu?',
     answer: 'nada'
   },
   1: {
     number: '2/12',
-    question: 'Ele ficou um tempinho moldando uma obra de arte sobre uma pessoa, até então pouco se sabe sobre ela. Esta obra durou quantos segundos?',
+    question: 'Ele ficou um tempinho moldando uma obra de arte sobre mim, até então pouco se sabe sobre ela. Esta obra durou quantos segundos? AAAA eu não me lembro',
     answer: '25'
   },
   2: {
     number: '3/12',
-    question: 'Esse pombinho na verdade tinha outra profissão, ele regava flores. Mas entre tantas flores, uma acabou chamando ele por um nome: "O __________"',
+    question: 'Ele na verdade tinha outra profissão, ele regava flores. Mas entre tantas flores, eu acabei chamando ele por um nome: "O __________"',
     answer: 'jardineiro'
   },
   3: {
     number: '4/12',
-    question: 'Ele não parava de pensar em como ela era cat, como ela era gata, como ela era muito _____',
+    question: 'Eu achava ele doidinho porque ele sempre falava que eu era cat, que eu era gata, que eu era _____',
     answer: 'gatta'
   },
   4: {
     number: '5/12',
-    question: 'Última linha, último recado...',
-    'answer': 'Eu amo você, Lelê'
+    question: 'Mas eu sempre gostava de receber cartas, teve até uma que começava com "You and me, always....". Mas o que estava escrito na primeira oração da 6 linha?',
+    'answer': 'eu te amo mil milhões de limões'
+  },
+  5: {
+    number: '6/12',
+    question: 'Eu to na metade do caminho, não posso parar agora... Será que ainda tem outra carta que eu não lembrei? Eu tinha que contar coisas e achei o número _',
+    'answer': '6'
+  },
+  6: {
+    number: '7/12',
+    question: 'Eu estou ficando tão feliz lembrando desses momentos... Também teve um dia que esse doido criou uma história em quadrinhos pra mim... e desenhou nós dois!!! Na camisa dele estava escrito...',
+    'answer': '19t11976'
+  },
+  7: {
+    number: '8/12',
+    question: 'São tantos momentos bons que vivi, o que será que ele está fazendo agora? Deve estar se embananando todo com aquele livro que eu recomendei. Pera aí, qual era o nome daquele livro?',
+    'answer': 'Diário de um banana'
+  },
+  8: {
+    number: '9/12',
+    question: 'Acho que estou lembrando de tudo... Que alegria!!!! Quando ele me abraçava e dizia que queria ser o meu ____ ____ ___',
+    'answer': 'left hand man'
+  },
+  9: {
+    number: '10/12',
+    question: 'Adoramos imaginar as nossas vidas futuras um com o outro. Ele fez também vários desenhos de como seríamos nós dois daqui uns anos, no relógio daqueles desenhos marcava algum horário...',
+    'answer': '10:07'
+  },
+  10: {
+    number: '11/12',
+    question: 'Eu sou capaz, eu consigo! Não vejo a hora de sair daqui e rever aquele videoclipe que ele fez com a minha música',
+    'answer': '10:07'
+  },
+  11: {
+    number: '12/12',
+    question: 'EU CONSIGO VENCER! NÃO PRECISO MAIS FICAR ME CULPANDO E ME SOBRECARREGANDO POR COISAS QUE NÃO CONSIGO CONTROLAR. Olha aonde eu cheguei, não tem espaço pra sentimentos negativos aqui, tenho que me concentrar nessa luta!',
+    'answer': '10:07'
   },
 }
 
@@ -265,7 +300,7 @@ const writingAnimation = async (textHtml) => {
           skipButton.style.pointerEvents = 'all';
           resolve();
         }
-      },60 * k); 
+      },1); 
       writingTimeoutIds.push(timeoutId);
     }
   });
@@ -396,6 +431,7 @@ form.addEventListener('submit', (e) => {
 
       setTimeout(() =>{
         rian.src = transitionToRian + '?t=' + new Date().getTime();
+        rian.style.opacity = '0';
       }, 4200)
 
       setTimeout(() =>{
