@@ -161,13 +161,13 @@ const questions = {
   },
   10: {
     number: '11/12',
-    question: 'Eu sou capaz, eu consigo! Não vejo a hora de sair daqui e rever aquele videoclipe que ele fez com a minha música',
-    'answer': '10:07'
+    question: 'Eu sou capaz, eu consigo! Não vejo a hora de sair daqui e rever aquele videoclipe que ele fez com a minha MÚSICA',
+    'answer': 'chokito'
   },
   11: {
     number: '12/12',
     question: 'EU CONSIGO VENCER! NÃO PRECISO MAIS FICAR ME CULPANDO E ME SOBRECARREGANDO POR COISAS QUE NÃO CONSIGO CONTROLAR. Olha aonde eu cheguei, não tem espaço pra sentimentos negativos aqui, tenho que me concentrar nessa luta!',
-    'answer': '10:07'
+    'answer': 'eu sou capaz!'
   },
 }
 

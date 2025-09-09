@@ -87,3 +87,7 @@ const futureDate = new Date('2025-09-10');
 const diffMilisseconds = futureDate.getTime() - hoje.getTime();
 const remainingDays = Math.floor(diffMilisseconds / (1000 * 60 * 60 * 24));
 time.textContent = `Faltam ${remainingDays} dias`;
+
+const redirectToGame = () =>{
+  window.location = './game.html'
+}
