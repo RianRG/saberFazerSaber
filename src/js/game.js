@@ -300,7 +300,7 @@ const writingAnimation = async (textHtml) => {
           skipButton.style.pointerEvents = 'all';
           resolve();
         }
-      },1); 
+      },40*k); 
       writingTimeoutIds.push(timeoutId);
     }
   });
